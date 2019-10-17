@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2019_10_17_183822) do
 
   create_table "books", force: :cascade do |t|
-    t.integer "user_id", null: false
     t.string "title", null: false
     t.boolean "edit", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
