@@ -6,7 +6,7 @@ class CreateTerms < ActiveRecord::Migration[6.0]
       t.string :word, null: false
       t.string :furigana, null: false
       t.text :summary, null: false
-      t,integer :view, null: false, default: 0
+      t.integer :view, null: false, default: 0
 
       t.timestamps
     end
