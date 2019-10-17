@@ -61,10 +61,12 @@ ActiveRecord::Schema.define(version: 2019_10_17_183822) do
     t.integer "failed_attempts", default: 0, null: false
     t.string "unlock_token"
     t.datetime "locked_at"
+    t.string "name", default: "anonymous", null: false
     t.boolean "admin", default: false, null: false
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index "\"anonymous\"", name: "index_users_on_anonymous"
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
